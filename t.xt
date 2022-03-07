@@ -1,0 +1,17 @@
+python -m venv myvenv
+source myvenv/bin/activate
+pip install django
+
+
+python manage.py startapp blog
+
+python manage.py makemigrations blog  // dastor sql ro minevise amade mikone ama anjam nemide
+python manage.py migrate blog  // in sql ro anjam mide 
+
+
+// baryae jadval didan , namayesh model
+from django.contrib import admin
+from .models import Post
+
+admin.site.register(Post)
+///
